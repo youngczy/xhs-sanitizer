@@ -187,6 +187,13 @@ xhs-sanitizer/
 ├── SKILL.md              # Skill 核心定义文件
 ├── README.md             # 本文件
 ├── LICENSE               # 许可证
+├── evals/                # 测试用例和报告
+│   ├── evals.json        # 测试配置
+│   ├── test_case_1.md    # 测试用例
+│   ├── ...
+│   └── iteration-1/      # 测试结果
+│       ├── benchmark.json
+│       └── benchmark.md
 ```
 
 ## 贡献指南

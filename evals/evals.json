@@ -1,0 +1,111 @@
+{
+  "skill_name": "xhs-sanitizer",
+  "evals": [
+    {
+      "id": 1,
+      "name": "高风险-联系方式",
+      "prompt": "检测并改写以下小红书文案中的敏感词，使用重度改写强度。文件路径: /Users/chenzhiyu/code/deliver-center/operation-manager-frontend/.claude/skills/xhs-sanitizer/evals/test_case_1.md",
+      "expected_output": "应该识别并改写'微信'、'QQ'、'电话'等联系方式敏感词",
+      "files": ["test_case_1.md"],
+      "assertions": [
+        {
+          "name": "微信已改写",
+          "description": "检查'微信'是否被改写为薇❤️或其他形式"
+        },
+        {
+          "name": "QQ已改写",
+          "description": "检查'QQ'是否被改写为🐧或其他形式"
+        },
+        {
+          "name": "手机号已改写",
+          "description": "检查手机号是否被分隔或使用emoji"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "中风险-竞品平台",
+      "prompt": "检测并改写以下小红书文案中的敏感词，使用中度改写强度。文件路径: /Users/chenzhiyu/code/deliver-center/operation-manager-frontend/.claude/skills/xhs-sanitizer/evals/test_case_2.md",
+      "expected_output": "应该识别并改写'淘宝'、'抖音'、'拼多多'等竞品平台名称",
+      "files": ["test_case_2.md"],
+      "assertions": [
+        {
+          "name": "淘宝已改写",
+          "description": "检查'淘宝'是否被改写为某宝"
+        },
+        {
+          "name": "抖音已改写",
+          "description": "检查'抖音'是否被改写为某音"
+        },
+        {
+          "name": "拼多多已改写",
+          "description": "检查'拼多多'是否被改写为拼夕夕"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "中风险-极限词",
+      "prompt": "检测并改写以下小红书文案中的敏感词，使用中度改写强度。文件路径: /Users/chenzhiyu/code/deliver-center/operation-manager-frontend/.claude/skills/xhs-sanitizer/evals/test_case_3.md",
+      "expected_output": "应该识别并改写'最好'、'第一'、'顶级'等极限用语",
+      "files": ["test_case_3.md"],
+      "assertions": [
+        {
+          "name": "极限词已改写",
+          "description": "检查'最好'、'第一'等极限词是否被改写"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "高风险-私域引流",
+      "prompt": "检测并改写以下小红书文案中的敏感词，使用重度改写强度。文件路径: /Users/chenzhiyu/code/deliver-center/operation-manager-frontend/.claude/skills/xhs-sanitizer/evals/test_case_4.md",
+      "expected_output": "应该识别并改写'私域'、'引流'、'变现'等私域引流词汇",
+      "files": ["test_case_4.md"],
+      "assertions": [
+        {
+          "name": "私域已改写",
+          "description": "检查'私域'是否被改写"
+        },
+        {
+          "name": "引流已改写",
+          "description": "检查'引流'是否被改写"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "中风险-医疗健康",
+      "prompt": "检测并改写以下小红书文案中的敏感词，使用中度改写强度。文件路径: /Users/chenzhiyu/code/deliver-center/operation-manager-frontend/.claude/skills/xhs-sanitizer/evals/test_case_5.md",
+      "expected_output": "应该识别并改写'减肥'、'美白'、'治疗'等医疗健康词汇",
+      "files": ["test_case_5.md"],
+      "assertions": [
+        {
+          "name": "减肥已改写",
+          "description": "检查'减肥'是否被改写为减脂或塑形"
+        },
+        {
+          "name": "美白已改写",
+          "description": "检查'美白'是否被改写为改善肤色或提亮"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "综合测试-混合敏感词",
+      "prompt": "检测并改写以下小红书文案中的敏感词，使用重度改写强度。文件路径: /Users/chenzhiyu/code/deliver-center/operation-manager-frontend/.claude/skills/xhs-sanitizer/evals/test_case_6.md",
+      "expected_output": "应该同时识别并改写多种类型的敏感词（联系方式、竞品、极限词等）",
+      "files": ["test_case_6.md"],
+      "assertions": [
+        {
+          "name": "所有高风险词已改写",
+          "description": "检查所有高风险敏感词是否都被改写"
+        },
+        {
+          "name": "所有中风险词已改写",
+          "description": "检查所有中风险敏感词是否都被改写"
+        }
+      ]
+    }
+  ]
+}

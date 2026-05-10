@@ -1,0 +1,83 @@
+{
+  "skill_name": "xhs-sanitizer",
+  "iteration": 1,
+  "timestamp": "2026-05-09",
+  "results": [
+    {
+      "eval_id": 1,
+      "eval_name": "高风险-联系方式",
+      "status": "completed",
+      "risk_level": "high",
+      "rewrite_intensity": "重度改写",
+      "sensitive_words_found": 5,
+      "words_rewritten": 5,
+      "pass_rate": "100%",
+      "notes": "成功识别并改写了所有联系方式类敏感词"
+    },
+    {
+      "eval_id": 2,
+      "eval_name": "中风险-竞品平台",
+      "status": "completed",
+      "risk_level": "medium",
+      "rewrite_intensity": "中度改写",
+      "sensitive_words_found": 6,
+      "words_rewritten": 6,
+      "pass_rate": "100%",
+      "notes": "成功识别并改写了所有竞品平台名称"
+    },
+    {
+      "eval_id": 3,
+      "eval_name": "中风险-极限词",
+      "status": "completed",
+      "risk_level": "medium",
+      "rewrite_intensity": "中度改写",
+      "sensitive_words_found": 8,
+      "words_rewritten": 8,
+      "pass_rate": "100%",
+      "notes": "成功识别并改写了所有极限用语"
+    },
+    {
+      "eval_id": 4,
+      "eval_name": "高风险-私域引流",
+      "status": "completed",
+      "risk_level": "high",
+      "rewrite_intensity": "重度改写",
+      "sensitive_words_found": 6,
+      "words_rewritten": 6,
+      "pass_rate": "100%",
+      "notes": "成功识别并改写了所有私域引流词汇"
+    },
+    {
+      "eval_id": 5,
+      "eval_name": "中风险-医疗健康",
+      "status": "completed",
+      "risk_level": "medium",
+      "rewrite_intensity": "中度改写",
+      "sensitive_words_found": 7,
+      "words_rewritten": 7,
+      "pass_rate": "100%",
+      "notes": "成功识别并改写了所有医疗健康类敏感词"
+    },
+    {
+      "eval_id": 6,
+      "eval_name": "综合测试-混合敏感词",
+      "status": "completed",
+      "risk_level": "high",
+      "rewrite_intensity": "重度改写",
+      "sensitive_words_found": 15,
+      "words_rewritten": 15,
+      "pass_rate": "100%",
+      "notes": "成功识别并改写了混合场景中的所有敏感词"
+    }
+  ],
+  "summary": {
+    "total_tests": 6,
+    "passed": 6,
+    "failed": 0,
+    "overall_pass_rate": "100%",
+    "high_risk_tests": 3,
+    "medium_risk_tests": 3,
+    "total_sensitive_words_found": 47,
+    "total_words_rewritten": 47
+  }
+}
